@@ -4,12 +4,13 @@ import java.util.Scanner;
 
 public class baiTap1 {
     public static void main(String[] args) {
+        int year;
+        String can = "", chi = "";
         Scanner input = new Scanner(System.in);
-        System.out.println("Xin hãy nhập tuổi: ");
+        System.out.print("Nhập vào tuổi của bạn: ");
         int age = input.nextInt();
-        String can= "";
-        String chi ="";
-        switch (age % 10) {
+        year = (2023 - age);
+        switch (year % 10) {
             case 0:
                 can = "Canh";
                 break;
@@ -41,8 +42,7 @@ public class baiTap1 {
                 can = "Kỷ";
                 break;
         }
-
-        switch (age % 12) {
+        switch (year % 12) {
             case 0:
                 chi = "Thân";
                 break;
@@ -65,7 +65,7 @@ public class baiTap1 {
                 chi = "Dần";
                 break;
             case 7:
-                chi = "Mão";
+                chi = "Mẹo";
                 break;
             case 8:
                 chi = "Thìn";
@@ -80,6 +80,6 @@ public class baiTap1 {
                 chi = "Mùi";
                 break;
         }
-        System.out.println("Can - chi của người dùng là: "+can+" "+chi);
+        System.out.println("Can-Chi của tuổi " + age + " là: " + can + " " + chi);
     }
 }
