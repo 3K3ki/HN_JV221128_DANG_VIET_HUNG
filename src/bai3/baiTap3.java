@@ -9,10 +9,13 @@ public class baiTap3 {
         Random random = new Random();
         int[] array = new int[50];
         int chon = 0;
+        int number;
+        int count = 0;
         System.out.println("Nhập 1 mảng gồm 50 phần tử ngẫu nhiên từ 1-100 : ");
         for (int i = 0; i < array.length; i++) {
-            array[i] = random.nextInt(100);
+            array[i] = random.nextInt(100) + 1;
         }
+
         while (chon != 4) {
             System.out.println("MENU");
             System.out.println("1. In mảng");
@@ -30,15 +33,15 @@ public class baiTap3 {
                     }
                     break;
                 case 2:
-                    int min = array[0],max = array[0];
-                    for (int i= 0; i < array.length; i++) {
-                        if(array[i] > max){
+                    int min = array[0], max = array[0];
+                    for (int i = 0; i < array.length; i++) {
+                        if (array[i] > max) {
                             max = array[i];
                         }
                     }
                     System.out.println("Giá trị lớn nhất trong mảng: " + max);
-                    for (int i = 0; i <array.length; i++) {
-                        if (array[i] <min){
+                    for (int i = 0; i < array.length; i++) {
+                        if (array[i] < min) {
                             min = array[i];
                         }
                     }
@@ -47,9 +50,10 @@ public class baiTap3 {
                 case 3:
                     break;
                 case 4:
+
                     break;
-                    case 5:
-                        System.exit(0);
+                case 5:
+                    System.exit(0);
                 default:
                     break;
             }
@@ -57,4 +61,5 @@ public class baiTap3 {
         }
     }
 }
+
 
