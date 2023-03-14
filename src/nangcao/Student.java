@@ -5,10 +5,6 @@ public class Student {
 
     public Student(){}
 
-    public void  getListStudent(){
-        System.out.println(":" +this.studentId + this.studentName+":"+this.age);
-    }
-
     public Student(int studentId, String studentName, int age) {
         this.studentId = studentId;
         this.studentName = studentName;
